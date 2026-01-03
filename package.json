@@ -1,0 +1,89 @@
+{
+    "name": "ts-live-server",
+    "displayName": "TS Live Server",
+    "description": "Live server with TypeScript, JSX, and TSX support using esbuild for transpilation",
+    "version": "1.0.0",
+    "publisher": "SteliosKakoliris",
+    "engines": {
+        "vscode": "^1.85.0"
+    },
+    "repository": {
+        
+    },
+    "categories": [
+        "Other"
+    ],
+    "keywords": [
+        "live server",
+        "typescript",
+        "jsx",
+        "tsx",
+        "esbuild",
+        "development server"
+    ],
+    "activationEvents": [],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "ts-live-server.start",
+                "title": "TS Live Server: Start Server"
+            },
+            {
+                "command": "ts-live-server.stop",
+                "title": "TS Live Server: Stop Server"
+            },
+            {
+                "command": "ts-live-server.startFromFolder",
+                "title": "Open with TS Live Server"
+            }
+        ],
+        "menus": {
+            "explorer/context": [
+                {
+                    "command": "ts-live-server.startFromFolder",
+                    "group": "navigation",
+                    "when": "explorerResourceIsFolder"
+                }
+            ]
+        },
+        "configuration": {
+            "title": "TS Live Server",
+            "properties": {
+                "tsLiveServer.port": {
+                    "type": "number",
+                    "default": 5500,
+                    "description": "Port number for the live server"
+                },
+                "tsLiveServer.autoOpen": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Automatically open browser when server starts"
+                },
+                "tsLiveServer.liveReload": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable live reload on file changes"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "package": "vsce package",
+        "publish": "vsce publish"
+    },
+    "devDependencies": {
+        "@types/node": "^20.10.0",
+        "@types/vscode": "^1.85.0",
+        "@types/ws": "^8.5.10",
+        "typescript": "^5.3.0",
+        "@vscode/vsce": "^2.22.0"
+    },
+    "dependencies": {
+        "esbuild": "^0.19.0",
+        "ws": "^8.14.0"
+    }
+}
