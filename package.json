@@ -2,7 +2,7 @@
     "name": "ts-live-server",
     "displayName": "TS Live Server",
     "description": "Live server with TypeScript, JSX, and TSX support using esbuild for transpilation",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "SteliosKakoliris",
     "engines": {
         "vscode": "^1.85.0"
