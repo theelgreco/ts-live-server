@@ -4,19 +4,20 @@ A VS Code extension that provides a live development server with **TypeScript, J
 
 ## Features
 
--   🚀 **TypeScript Support**: Write TypeScript (`.ts`) files and have them automatically transpiled to JavaScript
--   ⚛️ **JSX/TSX Support**: Full support for React JSX syntax in `.jsx` and `.tsx` files
--   🔄 **Live Reload**: Automatically refreshes the browser when files change
--   📁 **File-based Routing**: Serves files based on directory structure
--   ⚡ **Fast Transpilation**: Uses esbuild for near-instant transpilation
--   🎯 **Smart Resolution**: Automatically serves `.ts`/`.tsx` files when `.js` is requested
+- 🚀 **TypeScript Support**: Write TypeScript (`.ts`) files and have them automatically transpiled to JavaScript
+- ⚛️ **JSX/TSX Support**: Full support for React JSX syntax in `.jsx` and `.tsx` files
+- 🔄 **Live Reload**: Automatically refreshes the browser when files change
+- 📁 **File-based Routing**: Serves files based on directory structure
+- ⚡ **Fast Transpilation**: Uses esbuild for near-instant transpilation
+- 🎯 **Smart Resolution**: Automatically serves `.ts`/`.tsx` files when `.js` is requested
 
 ## Usage
 
 ### Start Server
 
-1. **Command Palette**: Press `Cmd+Shift+P` (Mac) or `Ctrl+Shift+P` (Windows/Linux) and run:
+You have two options to start the server: via the Command Palette or via the Explorer context menu. Starting the server from the Command Palette uses the workspace as the server root; starting it from a folder in the Explorer sets that folder as the server root.
 
+1. **Command Palette**: Press `Cmd+Shift+P` (Mac) or `Ctrl+Shift+P` (Windows/Linux) and run:
     - `TS Live Server: Start Server`
 
 2. **Context Menu**: Right-click on a folder in the Explorer and select:
@@ -24,7 +25,8 @@ A VS Code extension that provides a live development server with **TypeScript, J
 
 ### Stop Server
 
--   Run `TS Live Server: Stop Server` from the Command Palette
+- Run `TS Live Server: Stop Server` from the Command Palette.
+- You can also stop the server by clicking the TS Live Server status bar item in the bottom bar.
 
 ## Configuration
 
@@ -88,21 +90,21 @@ In your `index.html`:
 
 ### Transpiled (via esbuild)
 
--   `.ts` - TypeScript
--   `.tsx` - TypeScript with JSX
--   `.jsx` - JavaScript with JSX
+- `.ts` - TypeScript
+- `.tsx` - TypeScript with JSX
+- `.jsx` - JavaScript with JSX
 
 ### Served Directly
 
--   `.html`, `.css`, `.js`, `.mjs`
--   Images: `.png`, `.jpg`, `.jpeg`, `.gif`, `.svg`, `.webp`, `.ico`
--   Fonts: `.woff`, `.woff2`, `.ttf`, `.eot`, `.otf`
--   Media: `.mp4`, `.webm`, `.mp3`, `.wav`
--   Other: `.json`, `.pdf`, `.txt`, `.xml`
+- `.html`, `.css`, `.js`, `.mjs`
+- Images: `.png`, `.jpg`, `.jpeg`, `.gif`, `.svg`, `.webp`, `.ico`
+- Fonts: `.woff`, `.woff2`, `.ttf`, `.eot`, `.otf`
+- Media: `.mp4`, `.webm`, `.mp3`, `.wav`
+- Other: `.json`, `.pdf`, `.txt`, `.xml`
 
 ## Requirements
 
--   VS Code 1.85.0 or higher
+- VS Code 1.85.0 or higher
 
 ## License
 

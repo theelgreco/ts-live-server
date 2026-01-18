@@ -42,8 +42,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 async function startServer(rootPath?: string) {
     if (server && server.isRunning()) {
-        vscode.window.showWarningMessage("TS Live Server is already running. Stop it first.");
-        return;
+        await stopServer();
     }
 
     // Get root directory
